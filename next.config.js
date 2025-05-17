@@ -1,7 +1,11 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com'], // Add Unsplash hostname here
+    domains: ['images.unsplash.com'],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 

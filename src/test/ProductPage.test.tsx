@@ -28,12 +28,32 @@ const mockProduct: Product = {
   inStock: true,
 };
 
-// Mock lazy components
-jest.mock('../ImageGallery', () => () => <div>ImageGallery</div>);
-jest.mock('../ColorSelector', () => (props: any) => <div>ColorSelector</div>);
-jest.mock('../SizeSelector', () => (props: any) => <div>SizeSelector</div>);
-jest.mock('../QuantitySelector', () => (props: any) => <div>QuantitySelector</div>);
-jest.mock('../ExpandableDetails', () => (props: any) => <div>ExpandableDetails</div>);
+// Mock lazy components with displayName and no unused props
+jest.mock('../ImageGallery', () => {
+  const Mock = () => <div>ImageGallery</div>;
+  Mock.displayName = 'ImageGallery';
+  return Mock;
+});
+jest.mock('../ColorSelector', () => {
+  const Mock = () => <div>ColorSelector</div>;
+  Mock.displayName = 'ColorSelector';
+  return Mock;
+});
+jest.mock('../SizeSelector', () => {
+  const Mock = () => <div>SizeSelector</div>;
+  Mock.displayName = 'SizeSelector';
+  return Mock;
+});
+jest.mock('../QuantitySelector', () => {
+  const Mock = () => <div>QuantitySelector</div>;
+  Mock.displayName = 'QuantitySelector';
+  return Mock;
+});
+jest.mock('../ExpandableDetails', () => {
+  const Mock = () => <div>ExpandableDetails</div>;
+  Mock.displayName = 'ExpandableDetails';
+  return Mock;
+});
 
 // Mock useToast
 jest.mock('@/hooks/use-toast', () => ({
@@ -60,6 +80,6 @@ describe('ProductPage', () => {
     );
     const button = screen.getByRole('button', { name: /Add to Cart/i });
     fireEvent.click(button);
-    // The toast is mocked, so you can check if it was called if you want
+   
   });
 });
