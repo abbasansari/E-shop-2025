@@ -93,15 +93,15 @@ const Footer = ({ className }: FooterProps) => {
             <p className="text-sm text-muted-foreground mb-4">
               Subscribe to our newsletter for updates on new products and promotions.
             </p>
-            <form className="flex">
+            <form className="flex flex-col md:flex-row">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 rounded-l-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex-1 rounded-t-md md:rounded-l-md md:rounded-tr-none border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               />
               <button
                 type="submit"
-                className="inline-flex items-center justify-center rounded-r-md bg-[rgb(15,23,42)] px-3 py-2 text-sm font-medium text-[#F8FAFC] hover:bg-[rgb(15,23,42)]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+                className="inline-flex items-center justify-center rounded-b-md md:rounded-r-md md:rounded-bl-none bg-[rgb(15,23,42)] px-3 py-2 text-sm font-medium text-[#F8FAFC] hover:bg-[rgb(15,23,42)]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
               >
                 Subscribe
               </button>

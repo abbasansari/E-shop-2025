@@ -26,13 +26,13 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* Theme toggle button - hidden on mobile */}
+          {/* Theme toggle button - visible on all devices */}
           <Button
             variant="ghost"
             size="icon"
             aria-label="Toggle theme"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="hidden md:flex cursor-pointer"
+            className="flex cursor-pointer"
           >
             {theme === 'dark' ? (
               <Sun className="h-5 w-5 cursor-pointer" />
