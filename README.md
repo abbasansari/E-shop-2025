@@ -82,7 +82,7 @@ This project is a frontend technical assessment that demonstrates expertise in:
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/abbasansari/E-shop-2025.git
 cd e-commerce-product-page
 ```
 
